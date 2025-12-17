@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Skin Cancer Detection: A Modern Web Development Model</h1>
+<p class="comment">Upload an image of a skin lesion to detect if it's benign or malignant.</p>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+
+        <!-- File Upload Form -->
+        <form action="/upload" id="upload-file" method="post" enctype="multipart/form-data">
+            <p class="comment">Select image to upload and press Detect:</p>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" name="file" id="customFile">
+                <label class="custom-file-label" for="customFile"><i class="fas fa-image"></i> Choose file...</label>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-success" id="btn-predict">
+                    <i class="fas fa-upload"></i> Detect Image
+                </button>
+            </div>
+        </form>
+
+        <hr style="margin: 2rem 0; border-top: 1px solid #eee;">
+
+        <h5 class="comment" style="color:#aaa; font-weight:600;">OR</h5>
+        <p class="comment">Enter image URL and press Detect:</p>
+
+        <!-- URL Upload Form -->
+        <form action="/classify-url" id="submit-url" method="post">
+            <div class="form-group">
+                <input type="url" class="form-control mx-auto" name="url" id="url-input"
+                    placeholder="https://example.com/image.jpg" style="width: 80%;">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-globe"></i> Detect from URL
+                </button>
+            </div>
+        </form>
+
+        <h3 id="result" class="mt-4">
+            <span> </span>
+        </h3>
+
+    </div>
+</div>
+
+{% endblock %}

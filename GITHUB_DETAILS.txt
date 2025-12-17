@@ -1,0 +1,24 @@
+# GitHub Repository Details
+
+## Repository Name
+**DermaDetect-AI**
+
+## Short Description (for the "About" section right side of repo)
+A modern, AI-powered web application for the early detection and classification of skin cancer lesions using Deep Learning (DenseNet169) and Flask.
+
+## Long Description (for the README or Repo Description)
+
+**DermaDetect-AI: Advanced Skin Lesion Analysis System**
+
+Skin cancer remains one of the most prevalent public health challenges globally, where early diagnosis is the single most critical factor in successful treatment and survival. **DermaDetect-AI** is a robust, open-source web application designed to democratize access to preliminary skin lesion screening using state-of-the-art Deep Learning technologies.
+
+At its core, the system leverages a powerful **DenseNet169** Convolutional Neural Network (CNN), pre-trained on ImageNet and fine-tuned on the extensive **HAM10000** dataset (Human Against Machine). This architecture allows the model to capture complex, microscopic features of skin lesions that may be invisible to the naked eye. The model is capable of classifying skin images into **seven distinct diagnostic categories** with high confidence, including Melanoma, Melanocytic nevi, Basal cell carcinoma, and Actinic keratoses.
+
+The technical backbone of DermaDetect-AI combines the speed and flexibility of **FastAI (v1)** and **PyTorch** for inference with a lightweight, responsive **Flask** server. Unlike simple scripts, this project is a fully-realized web product featuring a modern, medically-themed user interface. We prioritize user experience (UX) with features like a drag-and-drop upload zone, instant visual confidence scoring, and a streamlined "fast-retry" workflow for rapid testing.
+
+Key highlights include:
+*   **Robust Data Pipeline**: Custom scripts (`train_model.py`) that handle unzipping, directory flattening, and class balancing automatically.
+*   **Production-Ready UI**: A polished frontend using Bootstrap 4, Google Fonts, and custom CSS gradients implementation.
+*   **Accuracy & Performance**: rigorous preprocessing and augmentation techniques ensure the model generalizes well to new, unseen images.
+
+This repository serves as a comprehensive template for developers looking to bridge the gap between medical imaging research and deployable web solutions, offering a complete end-to-end pipeline from raw data training to web-based inference.

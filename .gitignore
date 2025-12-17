@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Data (Too large for GitHub standard)
+data/
+
+# OS
+.DS_Store
+Thumbs.db
